@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lesson 4 — Charades</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="lesson">
+
+<div class="eyebrow">Lesson 4 · Cryptic Crosswords</div>
+<h1>Charades</h1>
+
+<p>New trick, and a step up: instead of one wordplay operation, a charade clue chains <em>several small ones</em> together. Named for the party game — you build the answer piece by piece, each piece separately clued, glued together left to right in order.</p>
+
+<h2>The recipe</h2>
+
+<p>Per the <a href="https://bestforpuzzles.com/cryptic-crossword-tutorial/charades.html" target="_blank" rel="noopener">Best For Puzzles tutorial</a>, a charade clue breaks the answer into two or more parts. Each part gets its own short definition or synonym, and — unlike an anagram — there's no shuffling. You just read left to right and concatenate:</p>
+
+<ul>
+<li><strong>Definition</strong> — same as always, start or end of the clue.</li>
+<li><strong>Part 1</strong> — a word or short synonym for the first chunk of letters.</li>
+<li><strong>Part 2 (…and more)</strong> — a word or short synonym for the next chunk. Keep going until the parts are used up.</li>
+</ul>
+
+<p>No indicator word is required — juxtaposition (sometimes with "and") is often the only signal. The skill is spotting where the whole word can be cut into two or three smaller real words or abbreviations, each with its own plausible synonym.</p>
+
+<h3>Worked example</h3>
+
+<p class="clue">"Everyone was in debt — that's permitted (7)"</p>
+
+<p>"That's permitted" is the definition, at the end. Split the rest into two pieces: "Everyone" and "was in debt." <strong>Everyone</strong> → <strong>ALL</strong>. <strong>Was in debt</strong> → <strong>OWED</strong>. Glue them in order:</p>
+
+<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; letter-spacing: 0.03em; font-size: 1.1rem;">ALL + OWED = <strong style="color: var(--accent)">ALLOWED</strong></p>
+
+<p>Seven letters, means "permitted." Both parts check out, both promises kept.</p>
+
+<h2>Practice</h2>
+
+<p>Find the cut point(s), define each piece, glue left to right.</p>
+
+<div class="clue-practice" data-answer="CARPET">
+  <p class="clue-text">"Vehicle and favourite make floor covering (6)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">Charade — find two small words for "Vehicle" and "favourite", then glue them left to right.</div>
+    <div class="hint">Vehicle → a 3-letter word for a car; favourite → a 3-letter word, as in "teacher's ___".</div>
+  </div>
+  <div class="parsing">Definition: <strong>floor covering</strong>. Parts: <strong>Vehicle</strong> → CAR, <strong>favourite</strong> → PET (as in "teacher's pet"). CAR + PET = <strong>CARPET</strong>.</div>
+</div>
+
+<div class="clue-practice" data-answer="TABLET">
+  <p class="clue-text">"Restaurant bill, allowed, is medicine (6)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">Charade — find two small words for "Restaurant bill" and "allowed", then glue them left to right.</div>
+    <div class="hint">Restaurant bill → a 3-letter word (as in "pick up the ___"); allowed → a 3-letter word, same as a rental agreement.</div>
+  </div>
+  <div class="parsing">Definition: <strong>medicine</strong>. Parts: <strong>Restaurant bill</strong> → TAB, <strong>allowed</strong> → LET. TAB + LET = <strong>TABLET</strong>.</div>
+</div>
+
+<div class="clue-practice" data-answer="LANCELOT">
+  <p class="clue-text">"Weapon used by many a Round Table knight (8)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">Charade — find words for "Weapon" and "many", then glue them left to right.</div>
+    <div class="hint">Weapon → a 5-letter pole weapon; many → a 3-letter word, as in "a ___ of".</div>
+  </div>
+  <div class="parsing">Definition: <strong>Round Table knight</strong>. Parts: <strong>Weapon</strong> → LANCE, <strong>many</strong> → LOT. LANCE + LOT = <strong>LANCELOT</strong>. (Source example, <a href="https://bestforpuzzles.com/cryptic-crossword-tutorial/charades.html" target="_blank" rel="noopener">Best For Puzzles</a>.)</div>
+</div>
+
+<div class="callout ask">
+Stuck on where to make the cut? Ask me — I'm your teacher here, and I can check your split and your part-by-part reasoning on any clue.
+</div>
+
+<h2>Primary source</h2>
+
+<p>See the <a href="https://bestforpuzzles.com/cryptic-crossword-tutorial/charades.html" target="_blank" rel="noopener">Best For Puzzles charades tutorial</a> for more examples, including cuts that don't fall on natural word boundaries (a more advanced variant). Four clue types down now — hidden word, anagram, double definition, charade — worth a real attempt at the Guardian's <strong>Quiptic</strong> (linked from <a href="0001-anatomy-of-a-cryptic-clue.html">Lesson 1</a>) to see them mixed together in a real grid.</p>
+
+<div class="nav-links">
+<a href="0003-double-definitions.html">← Lesson 3: Double Definitions</a>
+<a href="0005-containers.html">Lesson 5: Containers →</a>
+<a href="../reference/glossary.html">Glossary of terms so far →</a>
+<a href="../MISSION.md">Mission</a>
+</div>
+
+<script src="../assets/quiz.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lesson 1 — The Anatomy of a Cryptic Clue</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="lesson">
+
+<div class="eyebrow">Lesson 1 · Cryptic Crosswords</div>
+<h1>The Anatomy of a Cryptic Clue</h1>
+
+<p>Your goal is to sit down with a Guardian or Times cryptic and actually solve it. Right now, cryptic clues probably look like nonsense sentences. They aren't. Every single one — no matter how strange it looks — is built from the same contract. Once you can see that contract, the nonsense turns into a puzzle you can crack.</p>
+
+<h2>Every clue makes two promises</h2>
+
+<p>A cryptic clue is made of two parts, sitting side by side in the same sentence:</p>
+
+<ul>
+<li><strong>The definition</strong> — a plain, ordinary synonym for the answer, exactly like you'd find in a quick crossword. It sits at the very start or the very end of the clue, never in the middle.</li>
+<li><strong>The wordplay</strong> — a coded recipe, built from the rest of the clue, that constructs the answer letter by letter through some trick.</li>
+</ul>
+
+<p>Both parts independently point to the <em>same</em> answer. That's what makes cryptics different from a vague quick-crossword clue: you're not guessing at one fuzzy hint, you're solving two problems that have to agree. When your answer satisfies both the definition and the wordplay, you know — not guess — that you're right.</p>
+
+<p>The number in brackets at the end, like <code>(5)</code> or <code>(4,3)</code>, is the <strong>enumeration</strong>: how many letters the answer has, and how it splits across words. It's a hard constraint, not a hint about meaning.</p>
+
+<div class="callout">
+The Guardian's own crossword editors put it the same way: a cryptic clue is "a definition plus a piece of wordplay, both pointing at the same answer." Worth reading in full — see the primary source linked at the bottom of this lesson.
+</div>
+
+<h2>Your first wordplay trick: hidden words</h2>
+
+<p>The easiest wordplay trick to spot, and the best place to start, is the <strong>hidden word</strong>. The recipe is: <em>the answer is spelled out, letter by letter, running straight through a stretch of the clue — ignore the word breaks and just read the letters in order.</em></p>
+
+<p>Setters flag this with an indicator word that means "contained within," such as: <em>in, within, part of, some of, hidden in, held by, found in</em>. When you spot one of these, go hunting for a run of consecutive letters spanning two or more words.</p>
+
+<h3>Worked example</h3>
+
+<p class="clue">"<span class="definition">Sick</span> in April lecture (3)"</p>
+
+<p><strong>Sick</strong> is the definition — sitting at the start, exactly where we'd expect. That leaves "in April lecture" as the wordplay. <em>In</em> is our hidden-word indicator, so we read straight through <strong>April lecture</strong>, ignoring the word break, hunting for a run of letters:</p>
+
+<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; letter-spacing: 0.03em; font-size: 1.15rem;">a - p - r - <strong style="color: var(--accent)">i - l - l</strong> - e - c - t - u - r - e</p>
+
+<p>Hiding inside "apr<strong>ILL</strong>ecture" is <strong>ILL</strong> — three letters, matches the enumeration, and it means "sick." Both promises kept. That's the answer.</p>
+
+<h2>Practice</h2>
+
+<p>Three clues. Try each one before revealing — the effortful guess is what makes it stick, even (especially) when you get it wrong first.</p>
+
+<div class="clue-practice" data-answer="STALE">
+  <p class="clue-text">"<span class="definition">Not fresh</span>, part of almost alert (5)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">Indicator is <em>part of</em> — hunt for a run of letters spanning the two words, ignoring the space.</div>
+    <div class="hint">Look right where "almost" ends and "alert" begins — the answer straddles that boundary.</div>
+  </div>
+  <div class="parsing">Definition: <strong>Not fresh</strong>. Indicator: <em>part of</em>. Fodder: almo<strong>STALE</strong>rt → hidden inside "almo<u>STALE</u>rt".</div>
+</div>
+
+<div class="clue-practice" data-answer="GNOME">
+  <p class="clue-text">"<span class="definition">Garden figure</span> hidden in sign omens (5)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">Indicator is <em>hidden in</em> — read straight through "sign omens" ignoring the space.</div>
+    <div class="hint">It starts partway through "sign" and finishes partway through "omens".</div>
+  </div>
+  <div class="parsing">Definition: <strong>Garden figure</strong>. Indicator: <em>hidden in</em>. Fodder: si<strong>GNOME</strong>ns → hidden inside "si<u>GNOME</u>ns".</div>
+</div>
+
+<div class="clue-practice" data-answer="ARISE">
+  <p class="clue-text">"<span class="definition">Get up</span> within safari search (5)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">Indicator is <em>within</em> — read straight through "safari search" ignoring the space.</div>
+    <div class="hint">It starts inside "safari" (near the end) and finishes inside "search" (near the start).</div>
+  </div>
+  <div class="parsing">Definition: <strong>Get up</strong>. Indicator: <em>within</em>. Fodder: saf<strong>ARISE</strong>arch → hidden inside "saf<u>ARISE</u>arch".</div>
+</div>
+
+<div class="callout ask">
+Stuck, or want a second opinion on your reasoning? Ask me directly — I'm your teacher here, and I can walk through any clue, including ones from outside this lesson, step by step.
+</div>
+
+<h2>Primary source</h2>
+
+<p>For the fuller picture of how cryptics work and where to find beginner-friendly puzzles, read: <a href="https://www.theguardian.com/crosswords/crossword-blog/2024/oct/21/how-to-solve-cryptic-crosswords-the-ultimate-beginners-guide" target="_blank" rel="noopener">The Guardian — "How to solve cryptic crosswords: the ultimate beginner's guide"</a>. It also points to the <strong>Quiptic</strong> (Guardian's beginner cryptic, published Mondays) as your next real puzzle to try once you've done a few of these lessons.</p>
+
+<div class="nav-links">
+<a href="0002-anagram-clues.html">Lesson 2: Anagram Clues →</a>
+<a href="../reference/glossary.html">Glossary of terms so far →</a>
+<a href="../MISSION.md">Mission</a>
+</div>
+
+<script src="../assets/quiz.js" defer></script>
+</body>
+</html>

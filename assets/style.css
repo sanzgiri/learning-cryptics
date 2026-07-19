@@ -1,0 +1,260 @@
+/* Shared stylesheet for learning-cryptics lessons and reference docs. Tufte-ish: serif body, generous margins, restrained color. */
+
+:root {
+  --ink: #1a1a1a;
+  --paper: #fdfcf9;
+  --rule: #d8d3c4;
+  --accent: #8a3324;
+  --accent-soft: #f4e9e2;
+  --muted: #6b6558;
+  --good: #2f6f4f;
+  --bad: #a33;
+  --max-width: 42rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ece7dc;
+    --paper: #1b1a17;
+    --rule: #423e34;
+    --accent: #e0a487;
+    --accent-soft: #2c231e;
+    --muted: #a49e8e;
+    --good: #7fbf9f;
+    --bad: #e08a8a;
+  }
+}
+
+:root[data-theme="dark"] {
+  --ink: #ece7dc;
+  --paper: #1b1a17;
+  --rule: #423e34;
+  --accent: #e0a487;
+  --accent-soft: #2c231e;
+  --muted: #a49e8e;
+  --good: #7fbf9f;
+  --bad: #e08a8a;
+}
+
+:root[data-theme="light"] {
+  --ink: #1a1a1a;
+  --paper: #fdfcf9;
+  --rule: #d8d3c4;
+  --accent: #8a3324;
+  --accent-soft: #f4e9e2;
+  --muted: #6b6558;
+  --good: #2f6f4f;
+  --bad: #a33;
+}
+
+* { box-sizing: border-box; }
+
+body.lesson {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.6;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+}
+
+body.lesson h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+body.lesson .eyebrow {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+body.lesson h2 {
+  font-size: 1.25rem;
+  margin-top: 2.5rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.35rem;
+}
+
+body.lesson h3 {
+  font-size: 1.05rem;
+  margin-top: 1.75rem;
+}
+
+body.lesson p, body.lesson li {
+  font-size: 1.05rem;
+}
+
+body.lesson a {
+  color: var(--accent);
+}
+
+.clue {
+  font-style: italic;
+}
+
+.definition {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  font-style: normal;
+}
+
+.callout {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  padding: 0.9rem 1.1rem;
+  margin: 1.5rem 0;
+  font-size: 0.98rem;
+}
+
+.callout.ask {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+}
+
+.nav-links {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.nav-links a { margin-right: 1.25rem; }
+
+/* --- Quiz / clue-practice widget --- */
+
+.clue-practice {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.clue-practice .clue-text {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.clue-practice .clue-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.clue-practice input[type="text"] {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  flex: 1 1 10rem;
+  min-width: 0;
+}
+
+.clue-practice button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.clue-practice button:hover {
+  background: var(--accent-soft);
+}
+
+.clue-practice button:disabled {
+  border-color: var(--muted);
+  color: var(--muted);
+  cursor: default;
+  background: transparent;
+}
+
+.clue-practice .feedback {
+  margin-top: 0.75rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.92rem;
+  display: none;
+}
+
+.clue-practice .feedback.visible { display: block; }
+
+.clue-practice .feedback.correct { color: var(--good); }
+.clue-practice .feedback.incorrect { color: var(--bad); }
+
+.clue-practice .parsing {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--rule);
+  display: none;
+}
+
+.clue-practice .parsing.visible { display: block; }
+
+.clue-practice .hints {
+  margin-top: 0.5rem;
+}
+
+.clue-practice .hint {
+  display: none;
+  margin-top: 0.4rem;
+  padding: 0.45rem 0.7rem;
+  background: var(--accent-soft);
+  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+}
+
+.clue-practice .hint.visible { display: block; }
+
+/* --- Reference / glossary docs --- */
+
+body.reference {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.55;
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+body.reference h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+}
+
+body.reference dt {
+  font-weight: 700;
+  margin-top: 1.1rem;
+}
+
+body.reference dd {
+  margin: 0.15rem 0 0;
+}
+
+body.reference .avoid {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-style: italic;
+}
+
+@media print {
+  body { padding: 0; }
+  .clue-practice button, .nav-links, .callout.ask { display: none; }
+}

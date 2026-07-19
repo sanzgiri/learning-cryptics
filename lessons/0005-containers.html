@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lesson 5 — Containers (Insertion)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="lesson">
+
+<div class="eyebrow">Lesson 5 · Cryptic Crosswords</div>
+<h1>Containers (Insertion)</h1>
+
+<p>Charades glued parts side by side, left to right. Containers do something sneakier: one part gets stuffed <em>inside</em> another, splitting it open.</p>
+
+<h2>The recipe</h2>
+
+<p>Per the <a href="https://bestforpuzzles.com/cryptic-crossword-tutorial/containers.html" target="_blank" rel="noopener">Best For Puzzles tutorial</a>, a container clue has two word-parts, same as a charade — but instead of concatenating them, one is split open and the other is inserted into the gap. The indicator word tells you which direction:</p>
+
+<ul>
+<li><strong>Container indicators</strong> (the outer word does the holding): <em>holding, surrounding, swallowing, taking in</em>.</li>
+<li><strong>Contents indicators</strong> (the inner word does the entering): <em>within, filling, entering, tucked into</em>.</li>
+</ul>
+
+<p>Same underlying trick either way — you just need to know which part is the container (gets split open) and which is the contents (gets slotted inside).</p>
+
+<h3>Worked example</h3>
+
+<p class="clue">"Currently entering ruler is aware (7)"</p>
+
+<p>"Is aware" is the definition, at the end (knowing = shrewdly aware, as in "a knowing look"). "Entering" is a contents-indicator, so "Currently" — <strong>NOW</strong> — goes <em>into</em> "ruler" — <strong>KING</strong>. Split KING open and slot NOW inside:</p>
+
+<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; letter-spacing: 0.03em; font-size: 1.1rem;">K + <strong style="color: var(--accent)">NOW</strong> + ING = <strong style="color: var(--accent)">KNOWING</strong></p>
+
+<p>Seven letters, means "aware." Both promises kept.</p>
+
+<h2>Practice</h2>
+
+<p>Work out which part is the container and which is the contents before you try to slot anything in.</p>
+
+<div class="clue-practice" data-answer="MASONRY">
+  <p class="clue-text">"Boy held by Mary makes stonework (7)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">Container — "held by" tells you which part wraps around which. Find a name that means "Mary" and a small word for "Boy".</div>
+    <div class="hint">Mary splits into MA + RY; Boy → a 3-letter word, as in someone's SON.</div>
+  </div>
+  <div class="parsing">Definition: <strong>stonework</strong>. "held by" is a container indicator — <strong>Mary</strong> (container) holds <strong>Boy</strong> → SON (contents). MA + SON + RY = <strong>MASONRY</strong>.</div>
+</div>
+
+<div class="clue-practice" data-answer="LINNET">
+  <p class="clue-text">"Bird: allowed, holding tavern (6)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">Container — "holding" tells you which part wraps around which. Find a word for "allowed" and a word for "tavern".</div>
+    <div class="hint">allowed → a 3-letter word, as on a rental sign; tavern → a 3-letter word for a small pub.</div>
+  </div>
+  <div class="parsing">Definition: <strong>Bird</strong>. "holding" is a container indicator — <strong>allowed</strong> → LET (container) holds <strong>tavern</strong> → INN (contents). L + INN + ET = <strong>LINNET</strong>.</div>
+</div>
+
+<div class="callout ask">
+Stuck on which part is the container and which is the contents? Ask me — I'm your teacher here, and I can check your split and your reasoning on any clue.
+</div>
+
+<h2>Primary source</h2>
+
+<p>See the <a href="https://bestforpuzzles.com/cryptic-crossword-tutorial/containers.html" target="_blank" rel="noopener">Best For Puzzles container & contents tutorial</a> for the full indicator-word lists and more examples. Five clue types down now — try spotting all five mixed together in a real Guardian <strong>Quiptic</strong> (linked from <a href="0001-anatomy-of-a-cryptic-clue.html">Lesson 1</a>).</p>
+
+<div class="nav-links">
+<a href="0004-charades.html">← Lesson 4: Charades</a>
+<a href="0006-reversals.html">Lesson 6: Reversals →</a>
+<a href="../reference/glossary.html">Glossary of terms so far →</a>
+<a href="../MISSION.md">Mission</a>
+</div>
+
+<script src="../assets/quiz.js" defer></script>
+</body>
+</html>

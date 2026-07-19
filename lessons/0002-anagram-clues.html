@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lesson 2 — Anagram Clues</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="lesson">
+
+<div class="eyebrow">Lesson 2 · Cryptic Crosswords</div>
+<h1>Anagram Clues</h1>
+
+<p>You've already got the core contract down: definition + wordplay, both pointing at the same answer, checked against the enumeration. Hidden words were the gentlest wordplay trick because you didn't need to rearrange anything — just read straight through. Anagrams are the next step up: now you actually shuffle letters.</p>
+
+<h2>The recipe</h2>
+
+<p>An anagram clue has the same three ingredients as a hidden-word clue, just with a different trick in the middle:</p>
+
+<ul>
+<li><strong>Definition</strong> — same as always, plain synonym, start or end of the clue.</li>
+<li><strong>Anagram indicator</strong> — a word suggesting disorder, movement, or change: things like <em>broken, mixed, chaotic, dancing, wild, reformed, acting up, oddly, at sea</em>. It tells you "the fodder next to me needs shuffling."</li>
+<li><strong>Fodder</strong> — the exact letters to be rearranged. Count them: the fodder must contain <em>precisely</em> the same letters as the answer, no more, no fewer. This is what makes an anagram solution provable rather than guessed — if the letters don't match exactly, it's the wrong answer, full stop.</li>
+</ul>
+
+<div class="callout">
+Indicator words aren't a fixed list — setters are creative. Almost any word implying disorder, movement, or transformation can work. See the <a href="https://bestforpuzzles.com/cryptic-crossword-dictionary/anagram-indicators.html" target="_blank" rel="noopener">Best For Puzzles anagram indicator reference</a> for a long list, grouped by theme (disorder, movement, alteration, mental state, phrases like "at sea" or "in a whirl").
+</div>
+
+<h3>Worked example</h3>
+
+<p class="clue">"Silent, rearranged, to pay attention (6)"</p>
+
+<p>"To pay attention" is the definition, sitting at the end. "Rearranged" is the anagram indicator. That leaves "Silent" as the fodder — six letters to shuffle: <strong>S, I, L, E, N, T</strong>. Rearrange them and you get <strong>LISTEN</strong> — also six letters, and it means "pay attention." Letters match exactly, both promises kept.</p>
+
+<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; letter-spacing: 0.03em; font-size: 1.05rem;">S-I-L-E-N-T → <strong style="color: var(--accent)">L-I-S-T-E-N</strong></p>
+
+<h2>Practice</h2>
+
+<p>Same fodder-letters-in, same-letters-out check applies to all three. Count before you commit.</p>
+
+<div class="clue-practice" data-answer="EARTH">
+  <p class="clue-text">"Planet, hater acting strangely (5)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">Indicator is <em>acting strangely</em> — the fodder to shuffle is "hater".</div>
+    <div class="hint">Five letters: H, A, T, E, R. Think of what's beneath your feet.</div>
+  </div>
+  <div class="parsing">Definition: <strong>Planet</strong>. Indicator: <em>acting strangely</em>. Fodder: <strong>HATER</strong> → H,A,T,E,R rearranges to <strong>EARTH</strong>.</div>
+</div>
+
+<div class="clue-practice" data-answer="DANGER">
+  <p class="clue-text">"Garden reformed into peril (6)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">Indicator is <em>reformed</em> — shuffle the letters of "garden".</div>
+    <div class="hint">Six letters: G, A, R, D, E, N. The definition is "peril".</div>
+  </div>
+  <div class="parsing">Definition: <strong>peril</strong>. Indicator: <em>reformed</em>. Fodder: <strong>GARDEN</strong> → G,A,R,D,E,N rearranges to <strong>DANGER</strong>.</div>
+</div>
+
+<div class="clue-practice" data-answer="STONE">
+  <p class="clue-text">"Rock: onset gone haywire (5)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">Indicator is <em>gone haywire</em> — shuffle the letters of "onset".</div>
+    <div class="hint">Five letters: O, N, S, E, T. Think of a small rock.</div>
+  </div>
+  <div class="parsing">Definition: <strong>Rock</strong>. Indicator: <em>gone haywire</em>. Fodder: <strong>ONSET</strong> → O,N,S,E,T rearranges to <strong>STONE</strong>.</div>
+</div>
+
+<div class="callout ask">
+Stuck, or unsure whether an indicator word counts as an anagram signal? Ask me — I'm your teacher here, and I can check your letter-counting or your reasoning on any clue.
+</div>
+
+<h2>Primary source</h2>
+
+<p>For the indicator-word reference used above, see <a href="https://bestforpuzzles.com/cryptic-crossword-dictionary/anagram-indicators.html" target="_blank" rel="noopener">Best For Puzzles — Anagram Indicators</a>. For where to try these two tricks together in a real puzzle, the Guardian's <strong>Quiptic</strong> (see <a href="0001-anatomy-of-a-cryptic-clue.html">Lesson 1</a>'s primary source) is still your best next stop.</p>
+
+<div class="nav-links">
+<a href="0001-anatomy-of-a-cryptic-clue.html">← Lesson 1: Anatomy of a Clue</a>
+<a href="0003-double-definitions.html">Lesson 3: Double Definitions →</a>
+<a href="../reference/glossary.html">Glossary of terms so far →</a>
+<a href="../MISSION.md">Mission</a>
+</div>
+
+<script src="../assets/quiz.js" defer></script>
+</body>
+</html>

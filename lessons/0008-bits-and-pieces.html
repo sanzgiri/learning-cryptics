@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lesson 8 — Bits and Pieces</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="lesson">
+
+<div class="eyebrow">Lesson 8 · Cryptic Crosswords</div>
+<h1>Bits and Pieces</h1>
+
+<p>Every trick so far has operated on whole fodder words. Bits and pieces clues zoom in further: instead of a whole word, a single extracted letter — the first, middle, or last letter of some word — becomes one piece of a charade.</p>
+
+<h2>The recipe</h2>
+
+<p>Per the <a href="https://bestforpuzzles.com/cryptic-crossword-tutorial/bits-and-pieces.html" target="_blank" rel="noopener">Best For Puzzles tutorial</a>, positional phrases point at a single letter inside the word that follows them:</p>
+
+<ul>
+<li><strong>"Head of X" / "start of X" / "initially"</strong> → the first letter of X.</li>
+<li><strong>"Heart of X"</strong> → the middle letter of X.</li>
+<li><strong>"End of X" / "conclusion of X"</strong> → the last letter of X.</li>
+</ul>
+
+<p>That single letter then gets glued to other parts, charade-style, exactly like <a href="0004-charades.html">Lesson 4</a> — except now one of the "parts" is just one letter instead of a whole word. When "initially" (or "at first") applies to <em>several</em> words in a row, it's shorthand for "take the first letter of each" — the letters read off in order spell the answer.</p>
+
+<h3>Worked example</h3>
+
+<p class="clue">"Head of state and many make an opening (4)"</p>
+
+<p>"An opening" is the definition, at the end. "Head of state" → the first letter of <strong>STATE</strong> → <strong>S</strong>. "Many" → <strong>LOT</strong> (as in Lesson 4). Glue them:</p>
+
+<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; letter-spacing: 0.03em; font-size: 1.1rem;">S + LOT = <strong style="color: var(--accent)">SLOT</strong></p>
+
+<p>Four letters, means "opening" (a slot). Both promises kept.</p>
+
+<h2>Practice</h2>
+
+<p>Work out which single letter the positional phrase points to, then treat the rest like a charade.</p>
+
+<div class="clue-practice" data-answer="OPEN">
+  <p class="clue-text">"Heart of stone plus pig enclosure is unlocked (4)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">"Heart of" means the middle letter of the word that follows.</div>
+    <div class="hint">Heart of "stone" (S-T-O-N-E) is O. "Pig enclosure" is a 3-letter word: PEN.</div>
+  </div>
+  <div class="parsing">Definition: <strong>unlocked</strong>. "Heart of stone" → middle letter of STONE → <strong>O</strong>. "Pig enclosure" → <strong>PEN</strong>. O + PEN = <strong>OPEN</strong>.</div>
+</div>
+
+<div class="clue-practice" data-answer="DRUM">
+  <p class="clue-text">"End of land plus spirit makes an instrument (4)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">"End of" means the last letter of the word that follows.</div>
+    <div class="hint">End of "land" is D. "Spirit" (the drink) is a 3-letter word: RUM.</div>
+  </div>
+  <div class="parsing">Definition: <strong>instrument</strong>. "End of land" → last letter of LAND → <strong>D</strong>. "Spirit" → <strong>RUM</strong>. D + RUM = <strong>DRUM</strong>.</div>
+</div>
+
+<div class="clue-practice" data-answer="SOFA">
+  <p class="clue-text">"Sam often forgets appointments, initially — furniture (4)"</p>
+  <div class="clue-controls">
+    <input type="text" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button class="check-btn" type="button">Check</button>
+    <button class="hint-btn" type="button">Hint</button>
+    <button class="reveal-btn" type="button">Reveal parsing</button>
+  </div>
+  <div class="feedback"></div>
+  <div class="hints">
+    <div class="hint">"Initially" signals first letters — read the first letter of each word in order.</div>
+    <div class="hint">Sam, Often, Forgets, Appointments — four first letters.</div>
+  </div>
+  <div class="parsing">Definition: <strong>furniture</strong>. First letters of <strong>S</strong>am <strong>o</strong>ften <strong>f</strong>orgets <strong>a</strong>ppointments → <strong>SOFA</strong>.</div>
+</div>
+
+<div class="callout ask">
+Stuck on which letter a positional phrase points to? Ask me — I'm your teacher here, and I can check your reasoning on any clue.
+</div>
+
+<h2>Primary source</h2>
+
+<p>See the <a href="https://bestforpuzzles.com/cryptic-crossword-tutorial/bits-and-pieces.html" target="_blank" rel="noopener">Best For Puzzles bits and pieces tutorial</a> for more — it also covers common abbreviations (compass points, Roman numerals, chemical symbols) used the same way. This trick extends both <a href="0001-anatomy-of-a-cryptic-clue.html">Lesson 1</a>'s "extract specific letters" idea and <a href="0007-subtraction.html">Lesson 7</a>'s "take letters away," now applied one letter at a time.</p>
+
+<div class="nav-links">
+<a href="0007-subtraction.html">← Lesson 7: Subtraction</a>
+<a href="0009-homophones.html">Lesson 9: Homophones →</a>
+<a href="../reference/glossary.html">Glossary of terms so far →</a>
+<a href="../MISSION.md">Mission</a>
+</div>
+
+<script src="../assets/quiz.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Drill — Cryptic Crosswords</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="drill.css">
+</head>
+<body class="lesson drill">
+
+<div class="eyebrow">Drill · Cryptic Crosswords</div>
+<h1>Mixed Practice</h1>
+
+<p>All twelve clue types, drawn from real published cryptics (Times, Guardian, Telegraph and other Fifteensquared/Big Dave 44/National Post/Hindu-blogged puzzles) via the open <a href="https://cryptics.georgeho.org/" target="_blank" rel="noopener">cryptics.georgeho.org</a> dataset — not generated. Pick a type, or go random. No repeats until you've worked through a type's full set, then it reshuffles for another round.</p>
+
+<div class="drill-controls">
+  <label>Type: <select id="type-select"></select></label>
+  <label><input type="checkbox" id="timed-toggle"> Timed mode</label>
+  <button id="cheat-btn" type="button">Show cheat sheet</button>
+  <button id="reset-btn" type="button">Reset progress</button>
+</div>
+
+<div id="toast" class="callout"></div>
+
+<div class="clue-practice">
+  <div id="type-badge" class="type-badge"></div>
+  <p id="clue-text" class="clue-text"></p>
+  <div class="clue-controls">
+    <input type="text" id="guess-input" class="guess-input" placeholder="Your answer" aria-label="Your answer">
+    <button id="check-btn" type="button">Check</button>
+    <button id="hint-btn" type="button">Hint 1 (type)</button>
+    <button id="reveal-btn" type="button">Reveal answer</button>
+    <button id="next-btn" type="button">Next clue →</button>
+  </div>
+  <div id="timer-row">Time: <span id="timer-display">0.0s</span></div>
+  <div id="feedback" class="feedback"></div>
+  <div class="hints">
+    <div id="hint1" class="hint"></div>
+    <div id="hint2" class="hint"></div>
+  </div>
+  <div id="parsing" class="parsing"></div>
+</div>
+
+<h2>Your mastery</h2>
+<div class="stats-wrap">
+<table class="stats">
+  <thead>
+    <tr><th>Type</th><th>Attempted</th><th>Unaided</th><th>Hinted</th><th>Revealed</th><th>Solved %</th><th>Avg time</th></tr>
+  </thead>
+  <tbody id="stats-body"></tbody>
+  <tfoot id="stats-total"></tfoot>
+</table>
+</div>
+<p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.82rem; color: var(--muted);">"Unaided" = solved with no hints. "Hinted" = solved after Hint 1 and/or Hint 2. "Revealed" = you gave up and checked the answer. Progress is saved in this browser only (localStorage) — it won't follow you to another device.</p>
+
+<div id="cheat-sheet">
+<h2>Cheat sheet</h2>
+<table>
+<thead><tr><th>Type</th><th>Mechanic</th><th>Typical indicators</th></tr></thead>
+<tbody>
+<tr><td><strong>Hidden word</strong></td><td>Answer runs across consecutive letters in the clue, ignoring word breaks.</td><td>in, within, part of, some of, hidden in, held by, found in</td></tr>
+<tr><td><strong>Anagram</strong></td><td>Fodder's letters shuffle exactly into the answer.</td><td>broken, mixed, chaotic, dancing, wild, reformed, acting up, oddly, at sea</td></tr>
+<tr><td><strong>Double definition</strong></td><td>No indicator — two genuine, distinct senses of the same word, back to back.</td><td>(none — that's the giveaway)</td></tr>
+<tr><td><strong>Charade</strong></td><td>Two or more parts, each separately defined, concatenated left to right.</td><td>often no indicator; juxtaposition, "and"</td></tr>
+<tr><td><strong>Container</strong></td><td>One part split open, another part inserted inside it.</td><td>holding, surrounding, swallowing, taking in / within, filling, entering, tucked into</td></tr>
+<tr><td><strong>Reversal</strong></td><td>Fodder read backwards spells the answer.</td><td>going round, turned, backward, reversed, overturned, sent back</td></tr>
+<tr><td><strong>Subtraction</strong></td><td>Letters removed from a fodder word leave the answer.</td><td>beheaded, first off / heartless, hollow / incomplete, endless / without limits</td></tr>
+<tr><td><strong>Bits and Pieces</strong></td><td>Only some letters of a word used — first, middle, last, or alternating.</td><td>head of, heart of, end of / regularly, oddly, alternately</td></tr>
+<tr><td><strong>Homophone</strong></td><td>Fodder sounds identical to the answer, spelled differently.</td><td>so we hear, heard, so it's said, in speech, we hear, by the sound of it</td></tr>
+<tr><td><strong>Cryptic definition</strong></td><td>One deliberately misleading definition, no separate wordplay.</td><td>(none — often a trailing "?")</td></tr>
+<tr><td><strong>Complex clue</strong></td><td>Two or more of the above tricks stacked in one clue.</td><td>look for two indicators, not one</td></tr>
+<tr><td><strong>&amp;Lit clue</strong></td><td>The whole clue is simultaneously the definition and the wordplay.</td><td>no separate definition tail; often "?" or "!"</td></tr>
+</tbody>
+</table>
+<p><a href="../reference/glossary.html">Full glossary →</a></p>
+</div>
+
+<h2>Resources</h2>
+
+<div class="resource-grid">
+
+<div>
+<h3>Other online guides</h3>
+<ul>
+<li><a href="https://www.theguardian.com/crosswords/crossword-blog/2024/oct/21/how-to-solve-cryptic-crosswords-the-ultimate-beginners-guide" target="_blank" rel="noopener">The Guardian's beginner's guide</a> — the primary source behind Lesson 1.</li>
+<li><a href="https://bestforpuzzles.com/cryptic-crossword-tutorial/" target="_blank" rel="noopener">Best For Puzzles tutorial</a> — the primary source behind Lessons 1–12, full clue-type index.</li>
+<li><a href="https://www.dailycryptic.org/cryptic-crossword-solver" target="_blank" rel="noopener">Daily Cryptic's solver</a> — search by clue text, answer, or pattern; includes a 1,600+ word indicator directory.</li>
+<li><a href="https://www.leftfieldcryptics.com/glossary.html" target="_blank" rel="noopener">Leftfield Cryptics constructors' glossary</a> — setter-side terminology, useful once you start noticing conventions.</li>
+<li><a href="https://cryptics.georgeho.org/" target="_blank" rel="noopener">cryptics.georgeho.org</a> — the open dataset this drill is built from; browse or download 660,000+ real clues yourself.</li>
+</ul>
+</div>
+
+<div>
+<h3>Free cryptic crosswords</h3>
+<ul>
+<li><a href="https://www.theguardian.com/crosswords" target="_blank" rel="noopener">The Guardian</a> — daily Cryptic, plus the beginner-friendly Quiptic (Mondays) and Quick Cryptic.</li>
+<li><a href="https://puzzles.bestforpuzzles.com/games/daily-cryptic-crossword" target="_blank" rel="noopener">Best For Puzzles daily cryptic</a> — free, browser-playable.</li>
+<li><a href="https://games.washingtonpost.com/games/daily-cryptic-crossword" target="_blank" rel="noopener">Washington Post daily cryptic</a> — free, browser-playable.</li>
+<li><a href="https://simplydailypuzzles.com/daily-cryptic-crossword/" target="_blank" rel="noopener">Simply Daily Puzzles</a> — a free, easier daily cryptic, good for early practice.</li>
+<li><a href="https://lovattspuzzles.com/online-puzzles-competitions/daily-cryptic-crossword/" target="_blank" rel="noopener">Lovatts</a> — free daily cryptic with a 7-day archive, hints, and a timer.</li>
+<li class="note">The Financial Times crossword is free but PDF-only (print, not interactive) as of this writing.</li>
+</ul>
+</div>
+
+<div>
+<h3>Communities</h3>
+<ul>
+<li><a href="https://www.fifteensquared.net/" target="_blank" rel="noopener">Fifteensquared</a> comment threads — same-day discussion of Guardian/Independent puzzles, beginner-friendly.</li>
+<li><a href="https://timesforthetimes.co.uk/" target="_blank" rel="noopener">Times for the Times</a> comment threads — same, for Times puzzles.</li>
+<li>Reddit: <a href="https://www.reddit.com/r/crossword/" target="_blank" rel="noopener">r/crossword</a> and <a href="https://www.reddit.com/r/crosswords/" target="_blank" rel="noopener">r/crosswords</a> — general crossword communities that discuss cryptics alongside American-style puzzles.
+  <div class="note">Not independently verified for current activity level from this environment — check before treating either as your main hangout.</div>
+</li>
+</ul>
+</div>
+
+<div>
+<h3>American vs. British cryptics</h3>
+<ul>
+<li><strong>Rules:</strong> American cryptics (rare — mainly <em>GAMES</em> magazine, <em>The Nation</em>, occasional <em>New Yorker</em> puzzles) hold to stricter construction rules than British ones: every word in the clue must serve the wordplay or definition (no "extra" surface-smoothing words), and a clue is generally allowed only one wordplay device — no <a href="../lessons/0011-complex-clues.html">complex clues</a>.</li>
+<li><strong>Missing clue types:</strong> double definitions and cryptic definitions are common in British and Canadian cryptics but essentially unused in American ones.</li>
+<li><strong>Ximenean vs. libertarian:</strong> within British cryptics themselves, <em>The Times</em> leans Ximenean (strict grammatical precision in indicators — the wordplay must parse exactly, not just "get the message across"), while <em>The Guardian</em> leans libertarian (more relaxed, as long as it's clear). Named after Ximenes (Derrick Somerset Macnutt), author of the 1966 rulebook <em>Ximenes on the Art of the Crossword Puzzle</em>.</li>
+<li><strong>Popularity:</strong> cryptics are mainstream daily fare in Britain and common in Canada, India, and Australia, but a niche format in the US, where straight (quick-style) crosswords dominate.</li>
+</ul>
+<p class="note">Source: <a href="https://en.wikipedia.org/wiki/Cryptic_crossword" target="_blank" rel="noopener">Wikipedia — Cryptic crossword</a>.</p>
+</div>
+
+</div>
+
+<div class="nav-links">
+<a href="../lessons/0012-and-lit-clues.html">← Lesson 12: &amp;Lit Clues</a>
+<a href="../CURRICULUM.md">Curriculum</a>
+<a href="../reference/glossary.html">Glossary</a>
+<a href="../MISSION.md">Mission</a>
+</div>
+
+<script src="data.js"></script>
+<script src="drill.js"></script>
+</body>
+</html>
