@@ -3,7 +3,7 @@
 ## Why
 You want to be able to sit down with a British-style cryptic crossword (Guardian/Times) and actually solve it — not just admire clues after seeing the answer. You're starting from zero: no familiarity yet with clue types or cryptic conventions.
 
-See [CURRICULUM.md](CURRICULUM.md) for the full ordered list of clue types, what's done, and what's left. After Lesson 12, [drill/index.html](drill/index.html) is mixed practice with hundreds of real clues per type.
+See [Curriculum](curriculum.html) for the full ordered list of clue types, what's done, and what's left. After Lesson 12, [Drill](drill/index.html) is mixed practice with hundreds of real clues per type.
 
 ## Success looks like
 - Recognize the major clue types on sight (anagram, hidden word, double definition, charade, container/insertion, homophone, reversal, deletion) and identify which is in play for a given clue.

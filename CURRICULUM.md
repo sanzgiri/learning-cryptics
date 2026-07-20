@@ -2,7 +2,7 @@
 
 Ordered by increasing difficulty. Each type is chosen to build on something already learned — see "Connects to" on each entry. Order is a plan, not a contract: it can shift based on what the [[learning-records]] show, but this is the default path.
 
-Source for the canonical list of clue types: [Best For Puzzles tutorial index](https://bestforpuzzles.com/cryptic-crossword-tutorial/) (fetched 2026-07-18), cross-checked against the Guardian's beginner guide (see RESOURCES.md).
+Source for the canonical list of clue types: [Best For Puzzles tutorial index](https://bestforpuzzles.com/cryptic-crossword-tutorial/) (fetched 2026-07-18), cross-checked against the Guardian's beginner guide (see [Resources](resources.html)).
 
 ## Done
 
